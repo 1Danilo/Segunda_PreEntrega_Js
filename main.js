@@ -28,7 +28,6 @@ const categories = [
     name: "Accesorios",
     products: ["Reloj", "Billetera", "Gorra", "Cinturón"],
   },
-
 ];
 
 const genderOptions = {
@@ -46,7 +45,7 @@ function genero() {
   let seleccion;
   while (true) {
     seleccion = prompt(
-      "Elige tu género\nMasculino(m)\nFemenino (f)"
+      "Elige tu género \n Masculino(m) \n Femenino (f)"
     );
     if (seleccion === null) {
       return;
@@ -66,11 +65,9 @@ function genero() {
 
 function showProductMenu(category) {
   let productMenu = "Selecciona una opción:\n";
-
   for (let i = 0; i < category.products.length; i++) {
     productMenu += `${i + 1} - ${category.products[i]}\n`;
   }
-
   productMenu += `${category.products.length + 1} - Salir`;
 
   return productMenu;
@@ -96,15 +93,13 @@ function searchCategory(category) {
 }
 
 function searchM() {
-
   let busqueda;
-
-  const productosDisponibles = products.map(products => products.name)
-  alert("Mirá todos los Productos Disponibles que tenemos!")
-  alert(productosDisponibles.join("/ "))
+  const productosDisponibles = categories.map(category => category.products);
+  alert("Todos los Productos Disponibles");
+  alert(productosDisponibles.join(" /  "));
 
   do {
-    busqueda = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Ver todos los productos\n6 - Salir"));
+    busqueda = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Salir"));
 
     if (isNaN(busqueda)) {
       alert("Ingrese un valor válido.");
@@ -121,15 +116,13 @@ function searchM() {
 }
 
 function searchF() {
-
   let busquedaF;
-
-  const productosDisponibles = products.map(products => products.name)
-  alert("Mirá todos los Productos Disponibles que tenemos!")
-  alert(productosDisponibles.join("/ "))
-
+  
+const productosDisponibles = categories.map(categories => category.products)
+  alert("Todos los Productos Disponibles")
+  alert(productosDisponibles.join(" /  "))
   do {
-    busquedaF = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Ver todos los productos\n6 - Salir"));
+    busquedaF = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir"));
 
     if (isNaN(busquedaF)) {
       alert("Ingrese un valor válido.");
