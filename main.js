@@ -97,11 +97,9 @@ function searchCategory(category) {
 }
 
 function searchM() {
+  
   let busqueda;
-  const productosDisponibles = categories.map(category => category.products);
-  alert("Todos los Productos Disponibles");
-  alert(productosDisponibles.join(" /  "));
-
+  
   do {
     busqueda = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Salir"));
 
@@ -120,11 +118,9 @@ function searchM() {
 }
 
 function searchF() {
+  
   let busquedaF;
   
-const productosDisponibles = categories.map(categories => category.products)
-  alert("Todos los Productos Disponibles")
-  alert(productosDisponibles.join(" /  "))
   do {
     busquedaF = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir"));
 
