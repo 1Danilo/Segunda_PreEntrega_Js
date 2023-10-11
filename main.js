@@ -97,11 +97,11 @@ function searchCategory(category) {
 
 function searchM() {
 
+  let busqueda;
+
   const productosDisponibles = products.map(products => products.name)
   alert("Mirá todos los Productos Disponibles que tenemos!")
   alert(productosDisponibles.join("/ "))
-  
-  let busqueda;
 
   do {
     busqueda = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Ver todos los productos\n6 - Salir"));
@@ -122,11 +122,11 @@ function searchM() {
 
 function searchF() {
 
+  let busquedaF;
+
   const productosDisponibles = products.map(products => products.name)
   alert("Mirá todos los Productos Disponibles que tenemos!")
   alert(productosDisponibles.join("/ "))
-
-  let busquedaF;
 
   do {
     busquedaF = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Ver todos los productos\n6 - Salir"));
