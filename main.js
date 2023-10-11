@@ -29,12 +29,6 @@ const categories = [
     products: ["Reloj", "Billetera", "Gorra", "Cinturón"],
   },
 
-  {
-    name: "Ver todos los productos",
-    products: ["Remera Element Summon", "Remera DC Density Zone","Remera Santa Cruz Chest Assorted", "Jogging Volcom Plain Melange","Jogging Independent Baggy Bauhaus", "Pantalón Zoo York Bomber", "Zapatillas Vans Skate Old Skool LTH Pro", "Zapatillas DC Manteca SS", "Reloj", "Billetera", "Gorra", "Cinturón"]
-  },
-
-
 ];
 
 const genderOptions = {
@@ -102,6 +96,10 @@ function searchCategory(category) {
 }
 
 function searchM() {
+
+  const productosDisponibles = products.map(products => products.name)
+  alert("Mirá todos los Productos Disponibles que tenemos!")
+  alert(productosDisponibles.join("/ "))
   
   let busqueda;
 
@@ -124,9 +122,9 @@ function searchM() {
 
 function searchF() {
 
-  const productosDisponibles = categories.map(category => category.products);
-  alert("Todos los Productos Disponibles");
-  alert(productosDisponibles.join(" / "));
+  const productosDisponibles = products.map(products => products.name)
+  alert("Mirá todos los Productos Disponibles que tenemos!")
+  alert(productosDisponibles.join("/ "))
 
   let busquedaF;
 
