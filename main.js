@@ -28,14 +28,14 @@ const categories = [
     name: "Accesorios",
     products: ["Reloj", "Billetera", "Gorra", "Cinturón"],
   },
+
+  {
+    name: "Ver todos los productos",
+    products: ["Remera Element Summon", "Remera DC Density Zone","Remera Santa Cruz Chest Assorted", "Jogging Volcom Plain Melange","Jogging Independent Baggy Bauhaus", "Pantalón Zoo York Bomber", "Zapatillas Vans Skate Old Skool LTH Pro", "Zapatillas DC Manteca SS", "Reloj", "Billetera", "Gorra", "Cinturón"]
+  },
+
+
 ];
-
-
-/*
-const productosDisponibles = products.map(products => products.name)
-alert("Todos los Productos Disponibles")
-alert(productosDisponibles.join(", "))
-*/
 
 const genderOptions = {
   m: {
@@ -52,7 +52,7 @@ function genero() {
   let seleccion;
   while (true) {
     seleccion = prompt(
-      "Elige tu género \n Masculino(m) \n Femenino (f)"
+      "Elige tu género\nMasculino(m)\nFemenino (f)"
     );
     if (seleccion === null) {
       return;
@@ -72,11 +72,10 @@ function genero() {
 
 function showProductMenu(category) {
   let productMenu = "Selecciona una opción:\n";
+
   for (let i = 0; i < category.products.length; i++) {
     productMenu += `${i + 1} - ${category.products[i]}\n`;
   }
-
-  /*productMenu += `${category.products.length + 1} - Ver todos los productos`*/
 
   productMenu += `${category.products.length + 1} - Salir`;
 
@@ -103,9 +102,11 @@ function searchCategory(category) {
 }
 
 function searchM() {
+  
   let busqueda;
+
   do {
-    busqueda = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Ver todos los productos \n 6 - Salir"));
+    busqueda = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Ver todos los productos\n6 - Salir"));
 
     if (isNaN(busqueda)) {
       alert("Ingrese un valor válido.");
@@ -122,9 +123,15 @@ function searchM() {
 }
 
 function searchF() {
+
+  const productosDisponibles = categories.map(category => category.products);
+  alert("Todos los Productos Disponibles");
+  alert(productosDisponibles.join(" / "));
+
   let busquedaF;
+
   do {
-    busquedaF = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Ver todos los productos \n 4 - Salir" ));
+    busquedaF = parseInt(prompt("¿Qué deseas buscar?\n1 - Remeras\n2 - Pantalones\n3 - Zapatillas\n4 - Accesorios\n5 - Ver todos los productos\n6 - Salir"));
 
     if (isNaN(busquedaF)) {
       alert("Ingrese un valor válido.");
