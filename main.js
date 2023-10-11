@@ -30,6 +30,13 @@ const categories = [
   },
 ];
 
+
+/*
+const productosDisponibles = products.map(products => products.name)
+alert("Todos los Productos Disponibles")
+alert(productosDisponibles.join(", "))
+*/
+
 const genderOptions = {
   m: {
     label: "Masculino",
@@ -68,6 +75,9 @@ function showProductMenu(category) {
   for (let i = 0; i < category.products.length; i++) {
     productMenu += `${i + 1} - ${category.products[i]}\n`;
   }
+
+  /*productMenu += `${category.products.length + 1} - Ver todos los productos`*/
+
   productMenu += `${category.products.length + 1} - Salir`;
 
   return productMenu;
@@ -95,7 +105,7 @@ function searchCategory(category) {
 function searchM() {
   let busqueda;
   do {
-    busqueda = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Salir"));
+    busqueda = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Ver todos los productos \n 6 - Salir"));
 
     if (isNaN(busqueda)) {
       alert("Ingrese un valor válido.");
@@ -114,7 +124,7 @@ function searchM() {
 function searchF() {
   let busquedaF;
   do {
-    busquedaF = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir"));
+    busquedaF = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Ver todos los productos \n 4 - Salir" ));
 
     if (isNaN(busquedaF)) {
       alert("Ingrese un valor válido.");
