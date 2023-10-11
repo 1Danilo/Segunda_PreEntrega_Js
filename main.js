@@ -64,7 +64,7 @@ function genero() {
 }
 
 const productosDisponibles = categories.map(category => category.products);
-alert("Mirá todos los productos disponibles, que tenemos.");
+alert("Mirá todos los productos disponibles que tenemos.");
 alert(productosDisponibles.join(" /  "));
 
 function showProductMenu(category) {
