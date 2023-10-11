@@ -63,6 +63,10 @@ function genero() {
   }
 }
 
+const productosDisponibles = categories.map(category => category.products);
+alert("Mirá todos los productos disponibles, que tenemos");
+alert(productosDisponibles.join(" /  "));
+
 function showProductMenu(category) {
   let productMenu = "Selecciona una opción:\n";
   for (let i = 0; i < category.products.length; i++) {
